@@ -13,7 +13,8 @@ namespace CZBooks.senai.api.repositories
         BlogContext ctx = new BlogContext();
         public void Cadastrar(Instituicao NovaIns)
         {
-            
+            ctx.Instituicaos.Add(NovaIns);
+            ctx.SaveChanges();
         }
 
         public List<Instituicao> Listar()

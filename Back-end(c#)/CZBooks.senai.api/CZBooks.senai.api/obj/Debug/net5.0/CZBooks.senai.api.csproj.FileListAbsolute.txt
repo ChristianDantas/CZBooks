@@ -65,3 +65,5 @@ C:\Users\54690823855\Desktop\CZBooks\Back-end(c#)\CZBooks.senai.api\CZBooks.sena
 C:\Users\54690823855\Desktop\CZBooks\Back-end(c#)\CZBooks.senai.api\CZBooks.senai.api\obj\Debug\net5.0\ref\CZBooks.senai.api.dll
 C:\Users\54690823855\Desktop\CZBooks\Back-end(c#)\CZBooks.senai.api\CZBooks.senai.api\obj\Debug\net5.0\CZBooks.senai.api.pdb
 C:\Users\54690823855\Desktop\CZBooks\Back-end(c#)\CZBooks.senai.api\CZBooks.senai.api\obj\Debug\net5.0\CZBooks.senai.api.genruntimeconfig.cache
+C:\Users\54690823855\Desktop\CZBooks\Back-end(c#)\CZBooks.senai.api\CZBooks.senai.api\bin\Debug\net5.0\CZBooks.senai.api.xml
+C:\Users\54690823855\Desktop\CZBooks\Back-end(c#)\CZBooks.senai.api\CZBooks.senai.api\obj\Debug\net5.0\CZBooks.senai.api.xml
