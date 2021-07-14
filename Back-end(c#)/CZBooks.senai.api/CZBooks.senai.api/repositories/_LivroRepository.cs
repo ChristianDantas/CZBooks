@@ -35,6 +35,7 @@ namespace CZBooks.senai.api.repositories
                 .Where(a => a.IdAutor == LivroBuscado.IdAutor)
                 .Include(a => a.IdAutorNavigation)
                 .Include(a => a.IdCategoriaNavigation)
+                .Include(a => a.IdInstituicaoNavigation)
                 .ToList();
         }
     }

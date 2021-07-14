@@ -30,6 +30,11 @@ class Login extends Component{
 
 
             this.props.history.push('/autor');
+            if (parseJwt().role === '3') {
+                this.props.history.push('/autor');
+            } else {
+                this.props.history.push('/livro');
+            }
         })
 
 

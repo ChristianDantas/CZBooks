@@ -12,7 +12,6 @@ class Autor extends Component{
     ListarLivro=()=>{
         console.log("eita")
         fetch('http://localhost:5000/api/Livro/meu',{
-            method: "GET",
             headers:{ 
                 'Content-Type': 'application/json',
                 'Authorization' : 'Bearer ' + localStorage.getItem('usuario-login') 
@@ -22,6 +21,10 @@ class Autor extends Component{
         .then(dados => this.setState({ ListaLivros: dados }))
         .catch(erro => console.log(erro))
     }
+    componentDidMount() {
+
+        this.ListarLivro()
+      }
     render(){
     return( 
         <div>
