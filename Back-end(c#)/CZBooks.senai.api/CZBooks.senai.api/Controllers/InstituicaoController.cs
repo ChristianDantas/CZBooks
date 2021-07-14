@@ -27,12 +27,19 @@ namespace CZBooks.senai.api.Controllers
             return Ok(_InstituicaoRepository.Listar());
         }
 
-        [Authorize(Roles = "1")]
+        //[Authorize(Roles = "1")]
         [HttpPost]
         public IActionResult Post(Instituicao NovaIns)
         {
-            _InstituicaoRepository.Cadastrar(NovaIns);
-            return StatusCode(204);
+            try
+            {
+                _InstituicaoRepository.Cadastrar(NovaIns);
+                return StatusCode(204);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex);
+            }
         }
     }
 }

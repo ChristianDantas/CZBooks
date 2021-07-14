@@ -24,12 +24,19 @@ namespace CZBooks.senai.api.Controllers
         {
             _UsuarioRepository = new _UsuarioRepository();
         }
-        [Authorize(Roles = "1")]
+        //[Authorize(Roles = "1")]
         [HttpPost]
         public IActionResult Post(Usuario NovoUsuario)
         {
-            _UsuarioRepository.cadastrar(NovoUsuario);
-            return StatusCode(204);
+            try
+            {
+                _UsuarioRepository.cadastrar(NovoUsuario);
+                return StatusCode(201);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex);
+            }
         }
        
         

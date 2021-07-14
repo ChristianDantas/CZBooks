@@ -32,8 +32,14 @@ namespace CZBooks.senai.api.Controllers
         [HttpPost]
         public IActionResult Post(Categorium NovaCat)
         {
-            _CategoriaRepository.cadastrar(NovaCat);
-            return StatusCode(204);
+            try
+            {
+                _CategoriaRepository.cadastrar(NovaCat);
+                return StatusCode(201);
+            }
+            catch(Exception ex){
+                return BadRequest(ex);
+            }
         }
     }
 }

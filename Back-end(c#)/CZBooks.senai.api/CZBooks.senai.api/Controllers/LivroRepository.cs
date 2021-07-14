@@ -27,12 +27,19 @@ namespace CZBooks.senai.api.Controllers
         {
             return Ok(_LivroRepository.Listar());
         }
-        [Authorize(Roles = "1")]
+       // [Authorize(Roles = "1")]
         [HttpPost]
         public IActionResult Post(Livro NovoLivro)
         {
-            _LivroRepository.Cadastrar(NovoLivro);
-            return StatusCode(204);
+            try
+            {
+                _LivroRepository.Cadastrar(NovoLivro);
+                return StatusCode(201);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex);
+            }
         }
         [Authorize(Roles = "3")]
         [HttpGet ("meu")]

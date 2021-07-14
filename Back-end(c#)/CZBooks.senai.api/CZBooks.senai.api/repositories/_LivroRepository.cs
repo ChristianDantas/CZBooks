@@ -20,7 +20,12 @@ namespace CZBooks.senai.api.repositories
 
         public List<Livro> Listar()
         {
-            return ctx.Livros.ToList();
+            Autor autorN = new Autor();
+            return ctx.Livros
+                .Include(c=>c.IdAutorNavigation)
+                .Include(a=> a.IdCategoriaNavigation)
+                .Include(a=> a.IdInstituicaoNavigation)
+                .ToList();
         }
 
         public List<Livro> Minhas(int idUsuario)
